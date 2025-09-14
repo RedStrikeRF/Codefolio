@@ -31,7 +31,10 @@
       "@entities/*": ["entities/*"],
       "@features/*": ["features/*"],
       "@shared/*": ["shared/*"],
-      "@assets/*": ["shared/assets/*"]
+      "@assets/*": ["shared/assets/*"],
+      "@components/*": ["shared/components/*"],
+      "@hooks/*": ["shared/hooks/*"],
+      "@utils/*": ["shared/utils/*"]
     },
     "rootDirs": [],
     "typeRoots": ["./node_modules/@types"],      // Где искать типы

@@ -19,6 +19,9 @@ module.exports = {
             '@features': path.resolve(__dirname, 'src/features/'),
             '@shared': path.resolve(__dirname, 'src/shared/'),
             '@assets': path.resolve(__dirname, 'src/shared/assets/'),
+            '@components': path.resolve(__dirname, 'src/shared/components/'),
+            '@hooks': path.resolve(__dirname, 'src/shared/hooks/'),
+            '@utils': path.resolve(__dirname, 'src/shared/utils/')
         },
     },
     module: {
