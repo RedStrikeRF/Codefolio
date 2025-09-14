@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    /* Основные настройки компиляции */
+    "target": "ES6",                         // На какой стандарт JS компилируем
+    "module": "ESNext",                       // Используем ES модули (import/export)
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],// Подключаем стандартные библиотеки JS + браузерные API
+    "allowJs": false,                         // Разрешать .js файлы
+    "checkJs": false,                         // Проверять .js файлы
+    "jsx": "react-jsx",                        // Новый JSX-трансформер React 17+
+    "sourceMap": false,                        // Генерировать source maps
+    "rootDir": "./src",                        // Корень исходников
+    "incremental": true,                       // Инкрементальная компиляция для ускорения
+    "noEmit": false,                           // Не генерировать JS (Webpack делает сборку)
+
+    /* Проверка типов */
+    "strict": true,                             // Включает все строгие проверки TypeScript
+    "noImplicitAny": true,                      // Ошибка при неявном any
+    "strictNullChecks": true,                   // Строгая проверка null/undefined
+    "strictFunctionTypes": true,                // Строгая проверка типов функций
+    "strictBindCallApply": true,                // Строгая проверка bind/call/apply
+    "strictPropertyInitialization": true,       // Проверка инициализации свойств классов
+    "noImplicitThis": true,                     // Ошибка при неявном this
+    "alwaysStrict": true,                        // Включает 'use strict' во всех JS файлах
+
+    /* Проверка модулей и разрешение */
+    "moduleResolution": "node",                  // Как искать модули (Node.js стиль)
+    "baseUrl": "./src",                          // Базовая папка для относительных импортов
+    "paths": {                                   // Настройки алиасов
+      "@app/*": ["app/*"],
+      "@pages/*": ["pages/*"],
+      "@entities/*": ["entities/*"],
+      "@features/*": ["features/*"],
+      "@shared/*": ["shared/*"],
+      "@assets/*": ["shared/assets/*"]
+    },
+    "rootDirs": [],
+    "typeRoots": ["./node_modules/@types"],      // Где искать типы
+    "types": [],                                 // Подключаемые глобальные типы
+    "allowSyntheticDefaultImports": true,        // Позволяет писать import React from 'react'
+    "esModuleInterop": true,                     // Позволяет импортировать CommonJS через import
+    "resolveJsonModule": true,                   // Позволяет импортировать JSON
+    "isolatedModules": true,                     // Каждый файл можно транспилировать отдельно
+    "noEmitOnError": true,
+
+    /* Проверка кода */
+    "noFallthroughCasesInSwitch": true,         // Проверка switch на падение через кейсы
+    "noUncheckedIndexedAccess": false,           // Ошибка при доступе к элементам массива без проверки
+    "noUnusedLocals": true,                      // Ошибка при неиспользуемых локальных переменных
+    "noUnusedParameters": true,                  // Ошибка при неиспользуемых параметрах
+    "noImplicitReturns": true,
+    // Ошибка если функция может не возвращать значение
+    "noEmitHelpers": false,
+
+    /* Дополнительно */
+    "forceConsistentCasingInFileNames": true,    // Ошибка при несоответствии регистра в путях
+    "skipLibCheck": true                          // Пропуск проверки типов в node_modules для ускорения
+  },
+
+  "include": ["src"],                             // Папки с исходным кодом
+  "exclude": ["node_modules", "dist"]            // Папки, которые не проверяем
+}
